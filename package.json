@@ -2,7 +2,7 @@
   "name": "signature-phone",
   "description": "Customizable Signature Pad",
   "author": "Samuel Wolnerman, Ben Gilman",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "react-native": "*"
   },
   "adalo": {
-    "displayName": "Signature Box",
+    "displayName": "Signature",
     "components": [
       {
         "name": "SignaturePhone",
