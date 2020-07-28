@@ -24,12 +24,23 @@
       "type": "color",
       "default": "@primary"
     },
-
+    {
+      "name": "clearText",
+      "displayName": "Clear Button Text",
+      "type": "text",
+      "default": "Clear"
+    },
+    {
+      "name": "saveText",
+      "displayName": "Save Button Text",
+      "type": "text",
+      "default": "Save"
+    },
     {
       "name": "buttonTextColor",
       "displayName": "Button Text Color",
       "type": "color",
-      "default": "#000000"
+      "default": "@contrast:buttonBackgroundColor"
     },
     {
       "name": "borderColor",

@@ -15,15 +15,15 @@ class SignaturePhone extends Component{
 				  // handle when you click save button
 				  onOK={(img) => {
 						const {imageOutputAction} = this.props;
-						if(imageOutputAction) toggleAction(img)
+						if(imageOutputAction) imageOutputAction(img)
 					}}
 				  onEmpty={() => console.log("empty")}
 				  // description text for signature
 				  descriptionText="Sign"
 				  // clear button text
-				  clearText="Clear"
+				  clearText= {this.props.clearText}
 				  // save button text
-				  confirmText="Save"
+				  confirmText={this.props.saveText}
 				  // String, webview style for overwrite default style, all style: https://github.com/YanYuanFE/react-native-signature-canvas/blob/master/h5/css/signature-pad.css
 				  webStyle={`.m-signature-pad {
 						  background-color: ${this.props.backgroundColor};

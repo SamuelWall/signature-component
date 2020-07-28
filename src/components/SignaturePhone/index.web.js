@@ -59,10 +59,11 @@ class ReactSig extends Component {
 	 }
 
 	 trim = () => {
-		 let imgStuff = this.sigPage.getTrimmedCanvas().toDataURL('image/png')
+		 let imgStuff = this.sigPad.getTrimmedCanvas().toDataURL('image/png')
 		 this.setState({ trimmedDataURL: imgStuff })
 		 const {imageOutputAction} = this.props;
-			if(imageOutputAction) toggleAction(imgStuff)
+			if(imageOutputAction) imageOutputAction(imgStuff)
+			this.clear()
 	 }
 	 componentDidMount = () => {
 		 const height = this.viewRef.clientHeight;
@@ -87,7 +88,7 @@ class ReactSig extends Component {
 						<SignatureCanvas
 							penColor= {this.props.penColor}
 							ref={(ref) => { this.sigPad = ref }}
-				 			canvasProps={{width: this.state.width, height: this.state.height, className: 'sigCanvas'}}
+				 			canvasProps={{width: this.state._width, height: this.state._height, className: 'sigCanvas'}}
 							key={`sigCanvas.${this.props.backgroundColor+this.props.penColor}`}
 				 		/>
 				</div>
@@ -97,10 +98,10 @@ class ReactSig extends Component {
 						className="clear-btn"
 						onClick={this.clear}
 						key={`clearButton.${this.props.buttonBackgroundColor+this.props.buttonTextColor}`}>
-          	Clear
+          	{this.props.clearText}
         	</button>
         	<button style={this.styles.saveButton} className="save-btn" onClick={this.trim}>
-          	Save
+          	{this.props.saveText}
         	</button>
       	</div>
 
