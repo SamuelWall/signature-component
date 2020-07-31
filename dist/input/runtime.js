@@ -1,1 +1,3 @@
-export {    SignaturePhone as SignaturePhone,  } from '../../index.js'
+export {
+  SignaturePhone as SignaturePhone,
+} from '../../index.js'

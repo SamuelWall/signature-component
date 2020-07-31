@@ -8,9 +8,9 @@ import Signature from 'react-native-signature-canvas';
 
 //const SignaturePhone = ({text, onOK}) => {
 class SignaturePhone extends Component{
-	render = () => {
+	render = () => {console.log(this.props);
 		return (
-			<View style = {{width: 300, height: 250}}>
+			<View style = {{width: this.props._width, height: this.props._height}}>
 				<Signature
 				  // handle when you click save button
 				  onOK={(img) => {
@@ -19,7 +19,7 @@ class SignaturePhone extends Component{
 					}}
 				  onEmpty={() => console.log("empty")}
 				  // description text for signature
-				  descriptionText="Sign"
+				  descriptionText=""
 				  // clear button text
 				  clearText= {this.props.clearText}
 				  // save button text
@@ -27,9 +27,13 @@ class SignaturePhone extends Component{
 				  // String, webview style for overwrite default style, all style: https://github.com/YanYuanFE/react-native-signature-canvas/blob/master/h5/css/signature-pad.css
 				  webStyle={`.m-signature-pad {
 						  background-color: ${this.props.backgroundColor};
-							width: 300px;
-  						height: 250px;
+							width: ${this.props._width};
+  						height: ${this.props._height};
 						}
+            .m-signature-pad--footer
+            {
+              height: 95px;
+            }
 						.m-signature-pad--footer
 							.button{
 								background-color: ${this.props.buttonBackgroundColor};
