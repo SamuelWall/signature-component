@@ -1,5 +1,5 @@
 {
-  "displayName": "Signature Phone",
+  "displayName": "Signature",
   "defaultWidth": 250,
   "defaultHeight": 160,
   "components": "./index.js",

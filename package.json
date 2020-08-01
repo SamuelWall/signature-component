@@ -2,7 +2,7 @@
   "name": "signature-phone",
   "description": "Customizable Signature Pad",
   "author": "Samuel Wolnerman, Ben Gilman",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
